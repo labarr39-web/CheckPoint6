@@ -53,13 +53,13 @@ Para los nombres de clase en Python (y en otros lenguajes) se suele usar la form
 * `def __init__(self, nombre, edad)` es el método especial que es llamado automáticamente cuando se crea un nuevo objeto.  
 
 
-	Inicializa los atributos de los objetos que serán creados con la clase. Además de eso, el primer parámetro de `__init__`  siempre es una referencia  al objeto específico que se está creando o usando. Por convención, este parámetro se llama `self`, pero técnicamente, puede usarse cualquier nombre. `self` permite acceder a los propios atributos y métodos del objeto.  
+	Inicializa los atributos de los objetos que serán creados con la clase.
 	<br>  
 	
 * `self.nombre = nombre` y `self.edad = edad` son los atributos que van a tener los objetos.  
 	<br>  
 	
-* `def ejemplo_metodo(self):` es el método que cada objetos creado puede llamar.  
+* `def ejemplo_metodo(self):` es el método que cada objeto creado puede llamar.  
 	<br>  
 	
 * `print(self.nombre.upper())` es lo que hará el método `ejemplo_metodo`, en este caso, imprime nombre en mayúsculas.  
@@ -127,15 +127,90 @@ Resumiendo:
 
 Una clase define qué datos y comportamiento debe tener un objeto, y este último contiene los datos reales y usa dicho comportamiento.  
 
-La clase se escribe una vez, y se pueden crear muchos objetos a partir de ella, cada uno con datos diferentes.
+La clase se escribe una vez, y se pueden crear muchos objetos a partir de ella, cada uno con datos diferentes.  
+
+<br><br>
+
+2.  ***¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?***
+
+  <br>
+  
+  Tal y como se mostró en el punto anterior
+`__init__` es un método constructor al que se llama justo después de crearse un objeto (instancia) de una clase.  
+
+ Su función principal es inicializar los atributos del objeto con los valores que se le pasen o con valores por defecto.  
+
+Su sintaxis básica es:  
+
+    class MiClase:
+    def __init__(self, parametros):
+        # Inicialización de atributos
+        self.atributo = valor
+<br>  
+
+Al asignar una clase a un objeto  
+
+    objeto = MiClase(argumentos)
+  
+  <br>  
+  
+  Python crea el objeto y automáticamente llama al método `__init__` con los argumentos que se le haya pasado.  
+
+Aquí tenemos un ejemplo:  
+
+    class Persona:
+		    def __init__(self, nombre, edad):
+		        self.nombre = nombre
+		        self.edad = edad  
+		        
+	p = Persona("Ana", 30)  
+	print(p.nombre)  # Salida: Ana  
+	print(p.edad)    # Salida: 30
+  
+  <br>  
+  
+Además de eso, el primer parámetro de `__init__`  siempre es una referencia  al objeto específico que se está creando o usando. Por convención, este parámetro se llama `self`, pero técnicamente, puede usarse cualquier nombre. `self` permite acceder a los propios atributos y métodos del objeto.  
+
+<br><br>
+
+3.  ***¿Cuáles son los tres verbos de API?***
+
+  <br>
+  
+  Antes de explicar los tres verbos de API, creo que es conveniente empezar indicando qué es una API.  
+
+Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.
+
+Lo mejor para entenderlo va a ser utilizar un símil.
+
+Haciendo un alarde de imaginación vamos a transformar el servidor al que queremos acceder en un restaurante.
+
+Nada más entrar nos atiende un camarero muy amable, que en nuestro caso sería la API.  
+
+Nosotros le decimos qué queremos pedir (hacemos una solicitud); entonces el camarero entra en la cocina (el sistema o servidor) con nuestro pedido, y vuelve con la comida (la respuesta).  
+
+Nosotros no necesitamos saber cómo se elabora la comida, tan sólo saber cómo pedirla.
+
+En el mundo digital, las APIs permiten que aplicaciones, sitios web o dispositivos intercambien información y realicen acciones sin que el usuario tenga que intervenir directamente en el proceso.  
+<br>   
+Una vez dicho esto comencemos por saber qué son los verbos de una API:  
+
+Si hablamos de APIs, especialmente las que usan el estilo REST (muy comunes en la web), se utilizan **verbos HTTP** para indicar qué acción queremos hacer con un recurso (un dato o conjunto de datos).  
+
+Los tres verbos principales son:  
+	<br>  
+	    
+
+ * **GET (Obtener)**
+ 
+ <br>  
+ 
+|¿Qué hace?|Ejemplo sencillos |En términos API|
+|--|--|--|
+| Pide información o datos de un recurso | Queremos ver una lista de libros en una biblioteca| Se solicita los datos de los libros para que los muestre |  
+
 
 <br><br>  
-
-2. ***¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?***
-
-    <br>
-    Respuesta
-    <br><br>  
     
 3. ***¿Cuáles son los tres verbos de API?***
 
