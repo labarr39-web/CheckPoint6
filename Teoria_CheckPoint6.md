@@ -1,19 +1,13 @@
 
-## CheckPoint 6
+# CheckPoint 6
 
-  
-
-<br><br>
-
-  
+<br>  
 
 1.  ***¿Para qué usamos Clases en Python?***
 
-  
-
-<br>
-
-En Python, las clases y los objetos trabajan juntos para organizar y gestionar datos. Se crea una clase para definir comportamientos compartidos, después se crean objetos que usen esos comportamientos.
+  <br>  
+    
+  En Python, las clases y los objetos trabajan juntos para organizar y gestionar datos. Se crea una clase para definir comportamientos compartidos, después se crean objetos que usen esos comportamientos.
 <br>
 
 En otras palabras, una clase es como un plano o plantilla que se utiliza para crear objetos.
@@ -33,16 +27,17 @@ Después, dentro de la clase, se puede añadir un inicializador además de cualq
 Los atributos son como variables dentro de una clase y se usan para almacenar datos. Los métodos son funciones definidas dentro de una clase y son las acciones que pueden realizar los objetos creados con una clase .  
 <br>  
 
-A continuación se muestra la sintáxis básica de una clase:  
+A continuación se muestra la sintaxis básica de una clase:  
 
-    class NombreClase:
-		    def __init__(self, nombre, edad):
-				    self.nombre = nombre
-				    self.edad = edad
+```python
+ class NombreClase:
+	 def __init__(self, nombre, edad):
+	    self.nombre = nombre
+	    self.edad = edad
 
-				def ejemplo_metodo(self):
-						print(self.nombre.upper())
-				
+	 def ejemplo_metodo(self):
+			print(self.nombre.upper())
+```				
 
 * `class NombreClase` se compone de la palabra clave `class` para crear una clase, seguida del nombre de la clase, en este caso `NombreClase`.  
 <br>  
@@ -67,36 +62,42 @@ Para los nombres de clase en Python (y en otros lenguajes) se suele usar la form
 
 Veámoslo ahora con un ejemplo y cómo se pueden creare objetos a partir de una clase:  
 
-    class Perro:
-		    def __init__(self, nombre, edad):
-				    self.nombre = nombre
-				    self.edad = edad
+```python
+class Perro:
+  def __init__(self, nombre, edad):
+    self.nombre = nombre
+    self.edad = edad
 
-				def ladrar(self):
-						print(f'{self.nombre.upper()} dice ¡guau guau!')
-						
+def ladrar(self):
+		print(f'{self.nombre.upper()} dice ¡guau guau!')
+```
 <br>  
 
 Con esta clase `Perro` vamos a crear objetos.  
 
 Esta es la sintaxis básica para  crear objetos a partir de una clase:  
 
-    objeto_1 = NombreClase(atributo_1, atributo_2)
-    objeto_2 = NombreClase(atributo_1, atributo_2)
+```python
+objeto_1 = NombreClase(atributo_1, atributo_2)
+objeto_2 = NombreClase(atributo_1, atributo_2)
+```
 
 <br>  
 
 También se les puede llamar a cualquiera de los métodos definidos en la clase desde cada objeto:  
 
+```python
     objeto_1.nombre_metodo()
     objeto_2.nombre_metodo()
-    
+```
+
 <br>  
 
 Ahora vamos con el ejemplo práctico.  
 
 Crearemos dos 'perros' (objetos) usando la clase 'Perro'  
 
+```python
     class Perro:
 		    def __init__(self, nombre, edad):
 				    self.nombre = nombre
@@ -116,6 +117,7 @@ Crearemos dos 'perros' (objetos) usando la clase 'Perro'
 	  
 	perro_1.ladrar() # YOSHI dice ¡guau guau, y tengo 3 años!
 	perro_2.ladrar() # CASPER dice ¡guau guau, y tengo 7 años!
+```
 
 Hemos creado `perro_1` y `perro_2` pasándoles 2 argumentos a cada uno, Yoshi y 3 al primero, y Casper y 7 al segundo; con lo que se establecen los atributos `nombre` y `edad` para estas instancias.
 
@@ -142,10 +144,13 @@ La clase se escribe una vez, y se pueden crear muchos objetos a partir de ella, 
 
 Su sintaxis básica es:  
 
+```python
     class MiClase:
     def __init__(self, parametros):
         # Inicialización de atributos
         self.atributo = valor
+```
+
 <br>  
 
 Al asignar una clase a un objeto  
@@ -158,6 +163,7 @@ Al asignar una clase a un objeto
 
 Aquí tenemos un ejemplo:  
 
+```python
     class Persona:
 		    def __init__(self, nombre, edad):
 		        self.nombre = nombre
@@ -166,6 +172,7 @@ Aquí tenemos un ejemplo:
 	p = Persona("Ana", 30)  
 	print(p.nombre)  # Salida: Ana  
 	print(p.edad)    # Salida: 30
+  ````
   
   <br>  
   
@@ -177,7 +184,7 @@ Además de eso, el primer parámetro de `__init__`  siempre es una referencia  a
 
   <br>
   
-  Antes de explicar los tres verbos de API, creo que es conveniente empezar indicando qué es una API.  
+  Antes de explicar los tres verbos de API, creo que es conveniente empezar indicando **qué es una API**:  
 
 Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.
 
@@ -198,10 +205,22 @@ Una vez dicho esto comencemos por saber qué son los verbos de una API:
 Si hablamos de APIs, especialmente las que usan el estilo REST (muy comunes en la web), se utilizan **verbos HTTP** para indicar qué acción queremos hacer con un recurso (un dato o conjunto de datos).  
 
 Los tres verbos principales son:  
-	<br>  
-	    
 
- * **GET (Obtener)**
+	    - GET  
+	    - POST  
+	    - PUT  
+	    
+<br>  
+Para los ejemplos vamos a usar una biblioteca ficticia y cuya API tiene los siguientes endpoints para los libros:  
+
+		GET /libros      -> lista todos los libros  
+		GET /libros/{id} -> obtiene un libro po ID  
+		POST /libros     -> crea un libro nuevo  
+		PUT /libros/{id} -> actualiza un libro por ID  
+
+<br>  
+
+ * **GET (Obtener)**  
  
  <br>  
  
@@ -209,30 +228,271 @@ Los tres verbos principales son:
 |--|--|--|
 | Pide información o datos de un recurso | Queremos ver una lista de libros en una biblioteca| Se solicita los datos de los libros para que los muestre |  
 
+<br>  
+Supongamos que queremos obtener una lista de libros.
+  
+<br> 
+
+```python
+    import requests
+
+	url = "https://api.biblioteca.com/libros"
+	response = requests.get(url)
+
+	if response.status_code == 200:
+	    libros = response.json()
+	    print("Lista de libros:")
+	    for libro in libros:
+	        print(f"- {libro['titulo']} por {libro['autor']}")
+	else:
+	    print("Error al obtener libros:", response.status_code)
+```
+
+  <br>  
+  Esto imprime la lista de libros, pero si lo que queremos es obtener un libro en concreto lo buscamos por su id, que es único.
+    
+   <br>  
+    
+ ```python
+ 
+    import requests
+
+	libro_id = 123
+	url = f"https://api.biblioteca.com/libros/{libro_id}"
+	response = requests.get(url)
+
+	if response.status_code == 200:
+	    libro = response.json()
+	    print(f"Libro: {libro['titulo']} por {libro['autor']}")
+	else:
+	    print("Libro no encontrado o error:", response.status_code)
+```
+
+<br>  
+Así sólo imprimirá los datos de un único libro, si lo encuentra.
+
+<br>  
+
+* **POST (Crear)**  
+ 
+ <br>  
+ 
+|¿Qué hace?|Ejemplo sencillos |En términos API|
+|--|--|--|
+| Envía datos para crear un nuevo recurso | Queremos agregar un nuevo libro a la biblioteca| Se envía la información del libro para que se agregue a la base de datos |  
+
+<br>  
+Queremos añadir un libro nuevo:  
+
+<br>  
+
+```python
+	import requests
+
+	url = "https://api.biblioteca.com/libros"
+	
+	# Este es el nuevo libro que queremos añadir
+	
+	nuevo_libro = {
+	    "titulo": "Cien años de soledad",
+	    "autor": "Gabriel García Márquez",
+	    "año": 1967,
+	    "genero": "Realismo mágico"
+	}
+
+	response = requests.post(url, json=nuevo_libro)
+
+	if response.status_code == 201:
+	    libro_creado = response.json()
+	    print("Libro creado:", libro_creado)
+	else:
+	    print("Error al crear libro:", response.status_code)
+```
+
+<br>  
+
+
+* **PUT (Actualizar)**  
+ 
+ <br>  
+ 
+|¿Qué hace?|Ejemplo sencillos |En términos API|
+|--|--|--|
+| Actualiza un recurso existente o lo crea si no existe | Queremos corregir el título de un libro que ya está en la biblioteca| Se envían los datos actualizados para que se modifique el recurso |  
+
+<br>  
+Queremos actualizar el título del libro con id 123:  
+
+<br>  
+
+```python
+
+    import requests
+
+	libro_id = 123
+	url = f"https://api.biblioteca.com/libros/{libro_id}"
+	libro_actualizado = {
+	    "titulo": "Cien años de soledad (Edición revisada)",
+	    "autor": "Gabriel García Márquez",
+	    "año": 1967,
+	    "genero": "Realismo mágico"
+	}
+
+	response = requests.put(url, json=libro_actualizado)
+
+	if response.status_code == 200:
+	    libro = response.json()
+	    print("Libro actualizado:", libro)
+	else:
+	    print("Error al actualizar libro:", response.status_code)
+```
+
+<br>  
+
+Los códigos de estado pueden variar según la API, per 200 (OK), 201 (Creado) y 204 (Sin contenido) son los más comunes para éxito.  
+
+El formato JSON en los ejemplos es típico para APIs REST.
+    
+Estos son los tres verbos más comunes, aunque existen más como DELETE (Eliminar) y PATCH (Actualizar parcialmente), entre otros.  
 
 <br><br>  
-    
-3. ***¿Cuáles son los tres verbos de API?***
 
-    <br>
-    Respuesta
-    <br><br>  
-    
-4. ***¿Es MongoDB una base de datos SQL o NoSQL?***
+4.  ***¿Es MongoDB una base de datos SQL o NoSQL?***  
 
-    <br>
-    Respuesta
-    <br><br>  
-    
-5. ***¿Qué es una API?***
+<br>  
 
-    <br>
-    Respuesta
-    <br><br>  
-    
-6. ***¿Qué es Postman?***
+   [MongoDB](https://www.mongodb.com) es un sistema de gestión de bases de datos NoSQL, orientado a documentos y de código abierto.  
 
-    <br>
+A diferencia de las bases de datos relacionales tradicionales que usan tablas y filas, MongoDB almacena la información en documentos flexibles con formato JSON, lo que le da gran escalabilidad y flexibilidad.
+
+Algunas características clave de MongoDB son:
+
+Utiliza documentos en lugar de tablas, lo que facilita manejar datos semiestructurados o con esquemas variables.  
+
+Ofrece un modelo avanzado de consultas e indexación.  
+
+Es muy escalable y adecuado para aplicaciones que requieren manejar grandes volúmenes de datos o datos heterogéneos.  
+
+Es ampliamente usado en desarrollo web, big data y aplicaciones modernas que necesitan rapidez y flexibilidad en el manejo de datos.  
+
+En resumen, MongoDB es una base de datos NoSQL orientada a documentos que facilita el almacenamiento y consulta de datos de forma flexible y escalable.  
+<br>  
+
+Ahora veamos algunos ejemplos de cómo usar  MongoDB con Python, para ello vamos a importar la biblioteca pymongo.
+
+* Lo primero es conectarse a MongoDB  
+
+```python
+	import pymongo 
+	# Crear cliente MongoDB (por defecto localhost:27017)
+	 client = pymongo.MongoClient("mongodb://localhost:27017/") 
+	 
+	# Seleccionar base de datos
+	db = client["mi_base_de_datos"] 
+	
+	# Seleccionar colección 
+	collection = db["mi_coleccion"]
+   ```
+  
+  <br>  
+  
+  * Ahora insertamos documentos  
+  
+  ```python
+  # Insertar un solo documento
+  
+documento = {"nombre": "Juan", "edad": 30, "ciudad": "Madrid"}
+resultado = collection.insert_one(documento)
+print("ID del documento insertado:", resultado.inserted_id)
+```  
+
+<br>  
+
+```python
+	# Insertar varios documentos
+	
+documentos = [
+    {"nombre": "Ana", "edad": 25, "ciudad": "Barcelona"},
+    {"nombre": "Luis", "edad": 35, "ciudad": "Valencia"}
+]
+resultado = collection.insert_many(documentos)
+print("IDs de documentos insertados:", resultado.inserted_ids)
+```  
+
+<br>  
+
+* Así podemos consultar documentos  
+
+```python
+	# Encontrar un documento
+	
+persona = collection.find_one({"nombre": "Juan"})
+print(persona)
+```  
+<br>  
+
+```python
+	# Encontrar varios documentos
+	
+personas = collection.find({"edad": {"$gt": 28}})  # edad mayor a 28
+for p in personas:
+    print(p)
+```  
+
+<br>  
+
+* Ahora vamos a actualizar un documento  
+
+<br>  
+
+```python
+	# Actualizar un documento
+	
+resultado = collection.update_one(
+    {"nombre": "Juan"},
+    {"$set": {"edad": 31}}
+)
+print("Documentos modificados:", resultado.modified_count)
+```  
+
+<br>  
+
+* Por último eliminamos un documento  
+
+<br>  
+
+```python
+
+	# Eliminar un documento
+	
+	resultado = collection.delete_one({"nombre": "Luis"})
+	print("Documentos eliminados:", resultado.deleted_count)
+```  
+
+<br>  
+
+Estos son ejemplos básicos para empezar a trabajar con MongoDB desde Python.  
+
+PyMongo ofrece muchas más funcionalidades para consultas avanzadas, agregaciones, índices, etc.  
+
+PyMongo es la biblioteca oficial, pero existen otras, por ejemplo:
+
+- MongoEngine  
+- Ming  
+- uMongo  
+- MincePy  
+
+En la práctica:  
+
+- Driver recomendado: `PyMongo`  
+- Para modelos tipo ORM: `MongoEngine`  
+- Para async: `PyMongo Async API`  
+
+<br><br>  
+4.  ***¿Qué es Postman?***  
+
+<br>  
+s
     Respuesta
     <br><br>  
     
