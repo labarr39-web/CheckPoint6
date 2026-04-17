@@ -1339,5 +1339,6 @@ Implementación de log_it con envío de correo electrónico
          pass
 
 ``` 
+<br>  
 
 Una vez creada la nueva clase que hereda de  `log_it`, si usa  `@email_log_it`  como  decorador  tendrá el mismo comportamiento, pero además enviará un correo electrónico.
