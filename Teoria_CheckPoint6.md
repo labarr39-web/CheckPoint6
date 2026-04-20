@@ -102,7 +102,7 @@ También se les puede llamar a cualquiera de los métodos definidos en la clase 
 
 Ahora vamos con el ejemplo práctico.  
 
-Crearemos dos 'perros' (objetos) usando la clase 'Perro'  
+Crearemos dos 'perros' (objetos) usando la clase `Perro`  
 
 ```python
     class Perro:
@@ -194,6 +194,14 @@ Además de eso, el primer parámetro de `__init__`  siempre es una referencia  a
   Antes de explicar los tres verbos de API, creo que es conveniente empezar indicando **qué es una API**:  
 
 Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.
+
+<div  style="text-align: center;">
+	<img  src="imagenes/how-a-web-api-works.avif"  alt="Cómo funciona una API"  width="400"  height="300">
+</div>  
+<br>  
+
+
+
 
 Lo mejor para entenderlo va a ser utilizar un símil.
 
