@@ -196,7 +196,7 @@ Además de eso, el primer parámetro de `__init__`  siempre es una referencia  a
 Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.
 
 <div  style="text-align: center;">
-	<img  src="imagenes/how-a-web-api-works.png"  alt="Cómo funciona una API"  width="400"  height="300">
+	<img  src="imagenes/how-a-web-api-works.png"  alt="Cómo funciona una API"  width="600"  height="350">
 </div>  
 <br>  
 
