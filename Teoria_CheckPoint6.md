@@ -60,7 +60,14 @@ Para los nombres de clase en Python (y en otros lenguajes) se suele usar la form
 * `print(self.nombre.upper())` es lo que hará el método `ejemplo_metodo`, en este caso, imprime nombre en mayúsculas.  
 <br>  
 
-Veámoslo ahora con un ejemplo y cómo se pueden creare objetos a partir de una clase:  
+Veámoslo ahora con un ejemplo y cómo se pueden crear objetos a partir de una clase:  
+
+<div  style="text-align: center;">
+	<img  src="imagenes\Imagen_Clases_Perro-683x1024.png"  alt="ejemplo clase perro"  width="300"  height="400">
+</div>  
+<br>  
+
+
 
 ```python
 class Perro:
