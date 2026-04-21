@@ -634,7 +634,7 @@ Al navegar por estas secciones, se puede verificar, probar, depurar y monitorear
 
 
 <div style="text-align: center;">
-	<img src="imagenes/Postman_GET.png" alt="Postman" width="400" height="300">
+	<img src="imagenes/Postman_GET.png" alt="Postman" width="600" height="450">
 </div>
 
 <br>  
@@ -838,7 +838,7 @@ En el mundo de Python, los métodos mágicos o "dunder" (abreviación de "double
 
 
 <div style="text-align: center;">
-	<img src="imagenes/MEF.JPG" alt="Métodos Mágicos" width="400" height="300">
+	<img src="imagenes/MEF.JPG" alt="Métodos Mágicos" width="600" height="450">
 </div>
 
 <br>  
