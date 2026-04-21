@@ -193,15 +193,18 @@ Además de eso, el primer parámetro de `__init__`  siempre es una referencia  a
   
   Antes de explicar los tres verbos de API, creo que es conveniente empezar indicando **qué es una API**:  
 
-Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.
+Una  **API**  o "Interfaz de Programación de Aplicaciones"  por sus siglas en inglés, es un conjunto de reglas que permite que dos programas o sistemas diferentes se comuniquen entre sí.  
+<br>  
+
 
 <div  style="text-align: center;">
 	<img  src="imagenes/how-a-web-api-works.png"  alt="Cómo funciona una API"  width="600"  height="350">
 </div>  
+
 <br>  
 
 
-
+<br>  
 
 Lo mejor para entenderlo va a ser utilizar un símil.
 
@@ -218,6 +221,17 @@ En el mundo digital, las APIs permiten que aplicaciones, sitios web o dispositiv
 Una vez dicho esto comencemos por saber qué son los verbos de una API:  
 
 Si hablamos de APIs, especialmente las que usan el estilo REST (muy comunes en la web), se utilizan **verbos HTTP** para indicar qué acción queremos hacer con un recurso (un dato o conjunto de datos).  
+<br>  
+
+
+<div  style="text-align: center;">
+	<img  src="imagenes/rest_api.png"  alt="API REST"  width="600"  height="300">
+</div>  
+
+<br>  
+
+
+<br>  
 
 Los tres verbos principales son:  
 
@@ -378,7 +392,16 @@ Estos son los tres verbos más comunes, aunque existen más como DELETE (Elimina
 
    [MongoDB](https://www.mongodb.com) es un sistema de gestión de bases de datos NoSQL, orientado a documentos y de código abierto.  
 
-A diferencia de las bases de datos relacionales tradicionales que usan tablas y filas, MongoDB almacena la información en documentos flexibles con formato JSON, lo que le da gran escalabilidad y flexibilidad.
+A diferencia de las bases de datos relacionales tradicionales que usan tablas y filas, MongoDB almacena la información en documentos flexibles con formato JSON, lo que le da gran escalabilidad y flexibilidad.  
+<br><br>  
+
+
+<div style="text-align: center;">
+	<img src="imagenes/mongodb-1.png" alt="Formato MongoDB" width="400" height="300">
+</div>
+
+<br><br>  
+
 
 Algunas características clave de MongoDB son:
 
@@ -516,6 +539,13 @@ A través de su interfaz gráfica, puede realizar solicitudes HTTP, automatizar 
 
 <br>  
 
+
+<div style="text-align: center;">
+	<img src="imagenes/diagram-what-is-an-api-postman-illustration.svg" alt="Qué es Postman" width="400" height="300">
+</div>
+
+<br>
+
 			
 #### Características principales de Postman
 
@@ -550,6 +580,7 @@ Otra función importante del cliente API de Postman es la **gobernanza**.
 La plataforma le permite establecer estándares internos y definir plantillas para solicitudes, respuestas y pruebas, lo que ayuda a desarrollar API seguras y consistentes evitando al mismo tiempo una proliferación innecesaria.  
 
 <br>  
+
 
 
 #### Plataforma API Postman: cómo empezar
@@ -599,10 +630,19 @@ El espacio de trabajo se divide en varios **secciones**:
 
 Al navegar por estas secciones, se puede verificar, probar, depurar y monitorear cada llamada API.  
 <br>  
+<br>  
+
+
+<div style="text-align: center;">
+	<img src="imagenes/Postman_GET.png" alt="Postman" width="400" height="300">
+</div>
+
+<br>  
 
 
 #### Herramientas de Postman para el desarrollo de APIs  
 <br>  
+
 
 -   **Diseño**:  
 
@@ -660,7 +700,16 @@ El  **polimorfismo**  es uno de los pilares básicos en la  programación orient
 
 El término polimorfismo tiene origen en las palabras  _poly_  (muchos) y  _morfo_  (formas), y aplicado a la programación hace referencia a que los objetos pueden tomar diferentes formas. ¿Pero qué significa esto?
 
-Pues bien, significa que objetos de diferentes clases pueden ser accedidos utilizando el mismo interfaz, mostrando un comportamiento distinto (tomando diferentes formas) según cómo sean accedidos.
+Pues bien, significa que objetos de diferentes clases pueden ser accedidos utilizando el mismo interfaz, mostrando un comportamiento distinto (tomando diferentes formas) según cómo sean accedidos.  
+<br>  
+
+
+<div style="text-align: center;">
+	<img src="imagenes/Herencia.png" alt="Herencia" >
+</div>
+
+<br>  
+
 
 En lenguajes de programación como Python, que tiene tipado dinámico, el polimorfismo va muy relacionado con el  duck typing.  
 
@@ -774,12 +823,26 @@ for animal in Perro(), Gato():
 En el caso anterior, la variable  `animal`  ha ido “tomando las formas” de  `Perro`  y  `Gato`. Sin embargo, al tener tipado dinámico este ejemplo hubiera funcionado igual sin que existiera herencia entre  `Perro`  y  `Gato`.  
 
 <br><br>  
+
+
+
+
+
 7.  ***¿Qué es un método dunder?***  
 
 <br>  
+
 En el mundo de Python, los métodos mágicos o "dunder" (abreviación de "double underscore") son los pilares de la funcionalidad avanzada en las clases. A pesar de su nombre, no hay magia; son simplemente los métodos que el intérprete de Python invoca automáticamente cuando realizamos operaciones comunes, como sumar dos objetos, iterar sobre ellos, o incluso comprobar si un elemento está presente en una colección.  
 
 <br>  
+
+
+<div style="text-align: center;">
+	<img src="imagenes/MEF.JPG" alt="Métodos Mágicos" width="400" height="300">
+</div>
+
+<br>  
+
 
 #### ¿Qué hace especiales a los métodos mágicos?
 
@@ -907,20 +970,45 @@ En este caso el comportamiento del operador `+` para un objeto `CarpinchoGrupo` 
 Los métodos mágicos son una poderosa herramienta que nos proporciona Python para definir comportamientos personalizados en nuestras clases. Lejos de ser complicados, son simplemente métodos que Python llama automáticamente en segundo plano para realizar tareas cotidianas, como obtener la longitud de un objeto o iterar sobre él. La idea de este breve poste es que no te asustes si te encontras con esas palabras con muchos guiones bajos, sino que te familiriaces con esta poderosa herramienta que te va a ayudar a escribir código más limpio.  
 
 <br><br>  
+
+
+
 8.  ***¿Qué es un decorador de python?***
 
   <br>  
-    Un  decorador  es una función Python permite que agregar funcionalidad a otra función, pero sin modificarla. También, esto es llamado meta-programación, por que parte del programa trata de modificar a otro al momento de compilar.
+    Un  decorador  es una función Python que permite agregar funcionalidad a otra función, pero sin modificarla. También, esto es llamado meta-programación, porque parte del programa trata de modificar a otro en el momento de compilar.
 
-Los  decoradores son una funcionalidad relativamente importante en Python son definidos en el PEP-318.  [https://peps.python.org/pep-0318/](https://peps.python.org/pep-0318/)
+Los  decoradores son una funcionalidad relativamente importante en Python y son definidos en el PEP-318.  [https://peps.python.org/pep-0318/](https://peps.python.org/pep-0318/)
 
 Se podría decir que son funciones que modifican la funcionalidad de otras funciones, y ayudan a hacer el código más corto.  
 
+<br>  
+
+Veamos un par de esquemas para entenderlo mejor.  
+<br>
+
+
+<div style="text-align: center;">
+	<img src="imagenes/decorador.png" alt="Decorador" >
+</div>
+
+<br><br>  
+
+
+
+<div style="text-align: center;">
+	<img src="imagenes/decorador_ejemplo.webp" alt="Decorador" >
+</div>
+
+<br>  
+
 A continuación vamos a ver que son, cómo se crean y cómo se puede usar.
 
-Para llamar un  decorador  se utiliza el signo de arroba `@`.
+Para llamar un  decorador  se utiliza el signo de arroba `@`.  
+<br>  
 
-#### Todo es un objeto en Python
+
+#### Todo es un objeto en Python:
 
 Antes de entrar en materia con los  decoradores, hagamos un repaso sobre las funciones.
 
@@ -950,7 +1038,7 @@ Hola Pablo
 ```  
 <br>  
 
-#### Definir funciones dentro de funciones
+#### Definir funciones dentro de funciones:
 
 Avancemos un paso más.  
 
@@ -991,9 +1079,9 @@ Pero para entender bien los  decoradores, es necesario ir un paso más allá. La
 
 <br>  
 
-#### Devolviendo funciones desde funciones
+#### Devolviendo funciones desde funciones:
 
-No es necesario ejecutar una función dentro de otra. Simplemente sebpuede devolver como salida:  
+No es necesario ejecutar una función dentro de otra. Simplemente se puede devolver como salida:  
 
 
 ```python
@@ -1018,19 +1106,21 @@ Estás dentro de la función saluda()
 ```  
 <br>  
 
-Si nos  en el  `if/else`, esta devolviendo  `saluda`  y  `bienvenida`  y no  `saluda()`  y  `bienvenida()`. ¿A qué se debe esto?.  
+Si no,  en el  `if/else`, se devuelve  `saluda`  y  `bienvenida`  y no  `saluda()`  y  `bienvenida()`. ¿A qué se debe esto?.  
 
 Es porque cuando se usan paréntesis  `()`  la función se ejecuta. Por lo contrario, si no los usas la función es pasada y puede ser asignada a una variable sin ser ejecutada.
 
-Analicemos el código paso por paso. Al principio se usa  `hey  =  hola()`, por lo que el parámetro para  `nombre`  que se toma es «Pablo»,  ya que es el que se ha asignado por defecto. Esto hará que en el  `if`  se entre en  `nombre  ==  "Pablo"`, lo que hará que se devuelva la función saluda. Si por lo contrario hace la llamada a la función con  `hey  =  hola(nombre="Pelayo")`, la función devuelta será  `bienvenida`.  
+Analicemos el código paso por paso. Al principio se usa  `hey  =  hola()`, por lo que el parámetro para  `nombre`  que se toma es «Pablo»,  ya que es el que se ha asignado por defecto.  
+
+Esto hará que en el  `if`  se entre en  `nombre  ==  "Pablo"`, lo que hará que se devuelva la función saluda; Si por lo contrario hace la llamada a la función con  `hey  =  hola(nombre="Pelayo")`, la función devuelta será  `bienvenida`.  
 
 <br>  
 
-#### Usando funciones como argumento de otras
+#### Usando funciones como argumento de otras:
 
 Por último, se puede hacer que una función tenga a otra como entrada y que además la ejecute dentro de sí misma.  
 
-En el siguiente ejemplo se puede ver como  `haz_esto_antes_del_hola()`  es una función que de alguna forma encapsula a la función que se le pase como parámetro, añadiendo una determinada funcionalidad.  
+En el siguiente ejemplo se puede ver como  `haz_esto_antes_del_hola()`  es una función que de alguna forma encapsula a la función que se le pasa como parámetro, añadiendo una determinada funcionalidad.  
 
 En este ejemplo simplemente se imprime algo por pantalla antes de llamar a la función.
 
@@ -1054,7 +1144,7 @@ Los  decoradores son funciones que decoran a otras funciones, pudiendo ejecutar 
 
 <br>  
 
-#### Nuestro primer  decorador
+#### Nuestro primer  decorador:
 
 Realmente en el ejemplo anterior se vio como crear un  decorador. Vamos a modificarlo y hacerlo un poco más realista.
 
@@ -1319,7 +1409,8 @@ class  log_it:
 
 Esta implementación es mucho más limpia que con la función anidada.  
 
-Por otro lado, la función puede ser envuelta de la misma forma que hemos usado hasta ahora, usando  `@`.
+Por otro lado, la función puede ser envuelta de la misma forma que hemos usado hasta ahora, usando  `@`.  
+<br>  
 
 ```python
 log_it._logfile = "out2.log"  # Por si se  quiere usar otro nombre
